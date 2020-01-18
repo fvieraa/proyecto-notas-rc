@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generar ID</title>
+</head>
+
+<body>
+    <script>
+        function generarId(length) {
+            var id = '';
+            var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var caracteresLength = caracteres.length;
+            for (var i = 0; i < length; i++) {
+                id += caracteres.charAt(Math.floor(Math.random() * caracteresLength));
+            }
+            return id;
+        }
+        console.log(generarId(20));
+    </script>
+</body>
+
+</html>
